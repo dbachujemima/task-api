@@ -6,7 +6,6 @@ export async function findAll(completed) {
   });
 }
 
-// Create a new task
 export async function create(data) {
   return prisma.task.create({
     data,

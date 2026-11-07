@@ -5,12 +5,6 @@ export async function getTasks(req, res, next) {
   try {
     const { completed } = req.query;
 
-    if (completed !== undefined && completed !== 'true' && completed !== 'false') {
-      return res.status(400).json({
-        error: 'completed must be true or false',
-      });
-    }
-
     const completedFilter =
       completed === undefined ? undefined : completed === 'true';
 
